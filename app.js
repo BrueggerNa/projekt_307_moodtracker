@@ -10,23 +10,34 @@ const upload = multer({ dest: "public/uploads/" });
 const bcrypt = require("bcrypt");
 const mariadb = require("mariadb");
 const pg = require("pg");
+const Pool = require("pg").Pool
+
 require('dotenv').config()
 
-const meinprojekt_pool = new pg.Pool({
+/*const meinprojekt_pool = new pg.Pool({
     host: process.env.PG_DB_HOST,
     user: process.env.PG_DB_USER,
     password: process.env.PG_DB_PASSWORD,
     database: process.env.PG_DB_DATABASE,
     port: 5432,
     ssl: true
+}); */
+
+const meinprojekt_pool = new pg.Pool({
+    host: "dpg-cu1ejihu0jms738ilkpg-a.frankfurt-postgres.render.com",
+    user: "admin",
+    password:"8QEynwpUoc5QLcP8oXB4OmP8usYmaNJO",
+    database: "mymoodtrackerdb",
+    port: 5432,
+    ssl: true
 });
 
 
 const pool = mariadb.createPool({
-  host: process.env.MA_DB_HOST,
-  user: process.env.MA_DB_USER,
-  password: process.env.MA_DB_PASSWORD,
-  database: process.env.MA_DB_DATABASE,
+    host: "dpg-cu1ejihu0jms738ilkpg-a.frankfurt-postgres.render.com",
+    user: "admin",
+    password:"8QEynwpUoc5QLcP8oXB4OmP8usYmaNJO",
+    database: "mymoodtrackerdb",
   connectionLimit: 5
 });
 
