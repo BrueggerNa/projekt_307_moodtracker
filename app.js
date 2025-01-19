@@ -24,21 +24,21 @@ require('dotenv').config()
 }); */
 
 const meinprojekt_pool = new pg.Pool({
-    host: "dpg-cu1ejihu0jms738ilkpg-a.frankfurt-postgres.render.com",
-    user: "admin",
-    password:"8QEynwpUoc5QLcP8oXB4OmP8usYmaNJO",
-    database: "mymoodtrackerdb",
+    host: 'dpg-cu1ejihu0jms738ilkpg-a.frankfurt-postgres.render.com',
+    user: 'admin',
+    password:'8QEynwpUoc5QLcP8oXB4OmP8usYmaNJO',
+    database: 'mymoodtrackerdb',
     port: 5432,
     ssl: true
 });
 
 
 const pool = mariadb.createPool({
-    host: "dpg-cu1ejihu0jms738ilkpg-a.frankfurt-postgres.render.com",
-    user: "admin",
-    password:"8QEynwpUoc5QLcP8oXB4OmP8usYmaNJO",
-    database: "mymoodtrackerdb",
-  connectionLimit: 5
+    host: 'nexdu.ch',
+    user: 'ebuchs_bbz',
+    password: 'K5p68o6b@',
+    database: 'ebuchs_bbz',
+    connectionLimit: 5
 });
 
 const pool2 = pg.Pool;
